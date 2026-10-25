@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@theme {
+  --color-neon-purple: #aa3bff;
+  --color-neon-cyan: #0ff;
+  --color-bg-dark: #08060d;
+  --color-panel-glass: rgba(15, 15, 20, 0.7);
+  --color-border-glass: rgba(255, 255, 255, 0.1);
+  --font-mono: ui-monospace, Consolas, monospace;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-bg-dark);
+  color: #fff;
+  font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Glassmorphism utilities */
+.glass-panel {
+  background: var(--color-panel-glass);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--color-border-glass);
+  border-radius: 0.5rem;
+}
+
+/* Custom scrollbar for dark theme */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
